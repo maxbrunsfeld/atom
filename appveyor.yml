@@ -12,13 +12,10 @@ environment:
   ATOM_DEV_RESOURCE_PATH: c:\projects\atom
 
 install:
-  - SET PATH=C:\Program Files\Atom\resources\cli;%PATH%
   - ps: Install-Product node 4.2.1
 
 build_script:
-  - cd %APPVEYOR_BUILD_FOLDER%
-  - C:\projects\atom\script\build.cmd
-  - SET PATH=C:\Program Files\Atom\resources\cli;%PATH%
+  - .\script\build.cmd
 
 test: off
 deploy: off
