@@ -2,7 +2,7 @@ version: "{build}"
 
 branches:
   only:
-    - jf-add-appveyor-build
+    - mb-publish-artifacts-from-appveyor
 
 skip_tags: true
 clone_folder: c:\projects\atom
