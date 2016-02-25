@@ -299,11 +299,11 @@ module.exports = (grunt) ->
   grunt.registerTask('default', defaultTasks)
 
 getDefaultChannelAndReleaseBranch = (version) ->
-  if version.match(/dev/) or isBuildingPR()
+  if version.includes('dev') or isBuildingPR()
     channel = 'dev'
     releaseBranch = null
   else
-    if version.match(/beta/)
+    if version.includes('beta')
       channel = 'beta'
     else
       channel = 'stable'
